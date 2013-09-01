@@ -40,7 +40,6 @@
 						</goals>
 						<configuration>
 							<finalName>${dist.name}</finalName>
-							<!-- http://zhentao-li.blogspot.in/2012/06/maven-shade-plugin-invalid-signature.html -->
 							<filters>
 								<filter>
 									<artifact>*:*</artifact>
@@ -51,8 +50,6 @@
 									</excludes>
 								</filter>
 							</filters>
-							<!-- <artifactSet> <includes> <include>org.slf4j:*</include> <include>ch.qos.logback:*</include> 
-								<include>org.animesh:vmachine</include> </includes> </artifactSet> -->
 							<createDependencyReducedPom>true</createDependencyReducedPom>
 							<transformers>
 								<transformer
