@@ -4,10 +4,9 @@ import java.util.Map;
 
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.inject.Singleton;
 
-import org.animesh.vmachine.VendingMachineContext;
 import org.animesh.vmachine.Money;
+import org.animesh.vmachine.VendingMachineContext;
 import org.animesh.vmachine.command.CommandProcessor;
 import org.animesh.vmachine.command.exp.CommandProcessException;
 import org.animesh.vmachine.inventory.Inventory;
@@ -17,10 +16,9 @@ import org.animesh.vmachine.money.Cashbox;
 
 import com.google.inject.assistedinject.Assisted;
 
-@Singleton
+// Assisted (For every product, there is a new instance of this processor)
 public class CheckoutProcessor extends BaseProcessor {
 
-    final static String CMD_CHECKOUT = "CKO";
     final CommandProcessor homeProcessor;
     final CommandProcessor checkoutSelectProcessor;
     final Inventory inventory;

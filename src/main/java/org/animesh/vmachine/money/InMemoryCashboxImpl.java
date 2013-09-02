@@ -35,7 +35,6 @@ public class InMemoryCashboxImpl implements Cashbox {
         }
     }
 
-    // TODO: remove it later!
     @PostConstruct
     public void init() {
         if (!cashboxInit) {

@@ -6,6 +6,7 @@ import java.util.List;
 import org.animesh.vmachine.Money;
 
 public enum Cash {
+    // @formatter:off
     // Coins
     C1(Money.parse(0, 1L), "1 Paise"), 
     C2(Money.parse(0, 2L), "2 Paise"),
@@ -18,7 +19,9 @@ public enum Cash {
     N20(Money.parse(20L, 0), "20 Rupees"), 
     N50(Money.parse(50L, 0), "50 Rupees"), 
     N100(Money.parse(100L, 0), "100 Rupees");
+    // @formatter:on
 
+    // Helps with ordered iteration, and selection of coins/notes for withdrawal
     private static final List<Cash> orderedValues = Arrays.asList(N100, N50, N20, N10, N5, C10, C5, C2, C1);
 
     private final String description;

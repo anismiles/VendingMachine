@@ -35,7 +35,6 @@ public class InMemoryInventoryImpl implements Inventory {
         this.inventoryInit = inventoryInit;
     }
 
-    // TODO: remove later
     @PostConstruct
     public void init() {
         if (!inventoryInit) {
